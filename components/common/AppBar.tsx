@@ -2,25 +2,32 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Container, Navbar, Nav } from "react-bootstrap";
-
+import { motion } from "framer-motion";
 function AppBar() {
   return (
-    <Navbar collapseOnSelect expand="lg" className=" Navbar">
+    <Navbar collapseOnSelect expand="lg" className="Navbar">
       <Container style={{ maxWidth: "1750px" }}>
-        <Link href="/" className="logo">
-          <Image
-            src="/logo.png"
-            alt="logo"
-            width={50}
-            height={30}
-            className="img-fluid"
-          />
-          <div className="page-name">Teba Hos</div>
-        </Link>
+        <motion.div
+          initial={{ x: -30, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1.2 }}
+        >
+          <Link href="/" className="logo">
+            <Image
+              src="/logo.png"
+              alt="logo"
+              width={50}
+              height={30}
+              className="img-fluid"
+            />
+            <div className="page-name">Teba Hos</div>
+          </Link>
+        </motion.div>
+
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto links">
-            <Nav.Link as={Link} href="#features">
+            <Nav.Link as={Link} href="/">
               Home
             </Nav.Link>
             <Nav.Link as={Link} href="#Services">
@@ -36,11 +43,13 @@ function AppBar() {
               Contact Us
             </Nav.Link>
           </Nav>
-          <Nav>
-            <Nav.Link href="#deets">More deets</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
-              Dank memes
-            </Nav.Link>
+          <Nav className="LoginBtns">
+            <Link className="loginBtn" href="/Login">
+              Login
+            </Link>
+            <Link className="registerBtn" href="/Register">
+              Register
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

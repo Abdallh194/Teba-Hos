@@ -26,6 +26,7 @@ a {
 
 .Navbar {
   background-color: transparent !important;
+  margin-top: 10px;
 }
 .Navbar .logo {
   display: flex;
@@ -43,9 +44,34 @@ a {
 }
 .Navbar .links a {
   color: white;
-  font-size: 18px;
-  margin-right: 30px;
+  font-size: 19px;
+  margin-right: 35px;
 }
 .Navbar .links .active {
-  background-color: red;
+  background-color: white;
+  color: #3d67ed !important;
+  border-radius: 8px;
+}
+.Navbar .LoginBtns .loginBtn,
+.Navbar .LoginBtns .registerBtn {
+  background-color: white;
+  color: #3d67ed;
+  padding: 7px;
+  border-radius: 8px;
+  font-weight: 700;
+  width: 90px;
+  text-align: center;
+}
+.Navbar .LoginBtns a {
+  color: white;
+  font-size: 18px;
+  margin-right: 22px;
+}
+.Navbar .navbar-toggler {
+  background-color: rgba(255, 255, 255, 0.646);
+}
+@media (max-width: 992px) {
+  .Navbar .LoginBtns a {
+    margin-top: 10px;
+  }
 }/*# sourceMappingURL=globals.css.map */
