@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "bootstrap/dist/css/bootstrap.css"; //bootstrap
+
+//fonts
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap"); //logofont
+
+//vars
+
+$blue-color: #3d67ed;
+$darkblue-color: #203471;
+$logo-font: "Pacifico";
+
+//global classes
+
+a {
+  color: white;
+  text-decoration: none !important;
+}
+
+//import assest pages style
+@import "Assests/HomePage";
+@import "Assests/Navbar";

@@ -1,0 +1,27 @@
+.Navbar {
+  background-color: transparent !important;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    .page-name {
+      margin-left: 6px;
+      color: white;
+      font-size: 33px;
+      font-family: $logo-font;
+    }
+  }
+  .links {
+    width: 100%;
+    justify-content: center;
+    a {
+      color: white;
+      font-size: 18px;
+      margin-right: 30px;
+    }
+
+    .active {
+      background-color: red;
+    }
+  }
+}

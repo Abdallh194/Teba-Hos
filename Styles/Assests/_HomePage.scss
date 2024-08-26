@@ -1,0 +1,21 @@
+.HoemPage {
+  background: url("/home_bg.jpg");
+  background-size: cover;
+  background-position-y: 200px;
+  height: 100vh;
+  position: relative;
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+      to bottom,
+      $blue-color,
+      $blue-color,
+      transparent,
+      transparent
+    );
+  }
+}
