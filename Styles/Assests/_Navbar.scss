@@ -46,11 +46,43 @@
 
   .navbar-toggler {
     background-color: rgba(255, 255, 255, 0.646);
+    padding: 3px 8px;
   }
+  @media (max-width: 1200px) {
+    .links {
+      a {
+        font-size: 17px;
+        margin-right: 11px;
+      }
+    }
+    .logo {
+      .page-name {
+        font-size: 26px;
+      }
+    }
+    .LoginBtns {
+      .loginBtn,
+      .registerBtn {
+        width: fit-content;
+      }
+      a {
+        margin-right: 12px;
+      }
+    }
+  }
+
   @media (max-width: 992px) {
+    .logo {
+      .page-name {
+        font-size: 24px;
+      }
+      .img-fluid {
+        width: 40px;
+      }
+    }
     .LoginBtns {
       a {
-        margin-top: 10px;
+        margin: 10px auto;
       }
     }
   }
