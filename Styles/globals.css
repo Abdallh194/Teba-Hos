@@ -8,11 +8,21 @@ a {
   text-decoration: none !important;
 }
 
+.Cus_Margin_Padding {
+  padding: 40px 0;
+  margin-top: 40px;
+}
+@media (max-width: 992px) {
+  .Cus_Margin_Padding {
+    margin-top: 0;
+  }
+}
+
 .HoemPage {
   background: url("/home_bg.jpg");
   background-size: cover;
   background-position-y: 200px;
-  height: 910px;
+  height: 100vh;
   text-align: center;
   position: relative;
 }
@@ -22,7 +32,7 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to bottom, #3d67ed, #3d67ed, transparent, transparent);
+  background-image: linear-gradient(to bottom, #3d67ed, #3d67ed, rgba(0, 0, 0, 0.3098039216), rgba(0, 0, 0, 0.3098039216));
 }
 .HoemPage .stHead {
   margin-top: 190px;
@@ -104,7 +114,7 @@ a {
     line-height: 0.3;
   }
   .HoemPage .stHead {
-    margin-top: 63px;
+    margin-top: 104px;
   }
   .HoemPage .info {
     font-size: 17px;
@@ -184,5 +194,317 @@ a {
   }
   .Navbar .LoginBtns a {
     margin: 10px auto;
+  }
+}
+
+.Services {
+  margin-top: 80px;
+}
+.Services .TextCard {
+  padding: 15px;
+}
+.Services .service-Numbers {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 50px;
+}
+.Services .service-Numbers .num {
+  background-color: #3d67ed;
+  color: white;
+  height: 82px;
+  width: 82px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  font-weight: 900;
+  margin: auto;
+}
+.Services .service-Numbers .name {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 11px;
+}
+.Services .head {
+  font-size: 66px;
+  color: #3d67ed;
+  font-weight: 800;
+  line-height: 1.3;
+}
+.Services .info {
+  margin-top: 32px;
+  color: #313131;
+  font-size: 17px;
+}
+.Services .browse {
+  background-color: #3d67ed;
+  width: 50%;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  padding: 11px 0;
+  color: white;
+  margin-top: 46px;
+  font-weight: 600;
+  font-size: 19px;
+}
+@media (max-width: 1400px) {
+  .Services .head {
+    font-size: 53px;
+  }
+  .Services .info {
+    margin-top: 11px;
+  }
+  .Services .service-Numbers {
+    margin-top: 25px;
+  }
+  .Services .browse {
+    margin-top: 30px;
+  }
+  .Services .ImageCard .img-fluid {
+    height: 100%;
+  }
+}
+@media (max-width: 1200px) {
+  .Services .head {
+    font-size: 42px;
+  }
+}
+@media (max-width: 767px) {
+  .Services {
+    margin-top: 0;
+  }
+  .Services .service-Numbers .num {
+    height: 70px;
+    width: 70px;
+    font-size: 21px;
+    font-weight: 600;
+  }
+  .Services .service-Numbers .name {
+    font-size: 13px;
+  }
+  .Services .service-Numbers .details {
+    width: 25%;
+  }
+  .Services .browse {
+    margin: 30px auto;
+    width: 100%;
+  }
+}
+
+.Doctors .ImgCard,
+.Doctors .TextCard {
+  padding: 0;
+}
+.Doctors .TextCard {
+  background-color: #3d67ed;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.Doctors .TextCard .content {
+  padding: 47px;
+}
+.Doctors .TextCard .head {
+  font-size: 43px;
+  font-weight: 800;
+  color: black;
+}
+.Doctors .TextCard .descHead {
+  font-size: 27px;
+  letter-spacing: 3px;
+  padding: 25px 0;
+}
+.Doctors .TextCard .info {
+  color: rgba(0, 0, 0, 0.831);
+}
+.Doctors .nums {
+  display: flex;
+  margin-top: 62px;
+  font-size: 20px;
+  margin-left: 15px;
+}
+.Doctors .nums .col {
+  position: relative;
+}
+.Doctors .nums .col::before {
+  position: absolute;
+  content: "";
+  left: -15px;
+  width: 3px;
+  height: 110%;
+  top: -5%;
+  background-color: white;
+}
+@media (max-width: 1250px) {
+  .Doctors .ImgCard .img-fluid {
+    height: 100%;
+  }
+  .Doctors .TextCard .content {
+    padding: 40px 15px;
+  }
+  .Doctors .TextCard .head {
+    font-size: 31px;
+  }
+  .Doctors .TextCard .descHead {
+    font-size: 20px;
+  }
+  .Doctors .nums {
+    font-size: 18px;
+  }
+}
+@media (max-width: 767px) {
+  .Doctors .nums {
+    font-size: 14px;
+    margin-left: 10px;
+    margin-top: 40px;
+  }
+}
+
+.ExpertDoctors .header {
+  font-size: 37px;
+  letter-spacing: 6px;
+  margin: 20px 0;
+  text-align: center;
+}
+.ExpertDoctors .DoctorCard {
+  border-radius: 8px;
+  margin: 10px auto;
+  overflow: hidden;
+  padding: 0;
+  transition: 0.5s;
+  width: calc(25% - 20px);
+}
+.ExpertDoctors .DoctorCard .img-fluid {
+  display: block;
+  position: relative;
+  top: 0;
+  transition: 0.5s;
+}
+.ExpertDoctors .DoctorCard .doctorDetails {
+  background-color: #eff5ff;
+  height: 100px;
+  padding: 30px;
+  position: relative;
+  text-align: center;
+  transition: 0.5s;
+  z-index: 1;
+}
+.ExpertDoctors .DoctorCard .doctorDetails .name {
+  font-size: 1.25rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+.ExpertDoctors .DoctorCard .doctorDetails .dep {
+  color: #3d67ed;
+  padding: 5px 0;
+}
+.ExpertDoctors .DoctorCard .doctorDetails .socials {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  font-size: 21px;
+}
+.ExpertDoctors .DoctorCard:hover .doctorDetails {
+  height: 160px;
+  margin-top: -60px;
+}
+.ExpertDoctors .DoctorCard:hover .img-fluid {
+  top: -17px;
+}
+@media (max-width: 992px) {
+  .ExpertDoctors .DoctorCard {
+    width: 43%;
+  }
+}
+@media (max-width: 585px) {
+  .ExpertDoctors {
+    margin-top: -40px;
+  }
+  .ExpertDoctors .DoctorCard {
+    width: calc(100% - 40px);
+  }
+  .ExpertDoctors .header {
+    font-size: 25px;
+    letter-spacing: 3px;
+  }
+}
+
+footer {
+  background-color: #3d67ed;
+  color: white;
+  padding: 40px 0 15px 0;
+}
+footer .head {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+footer .icon {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+footer .icon .details {
+  margin-left: 10px;
+}
+footer .socials {
+  display: flex;
+}
+footer .socials a {
+  color: white;
+}
+footer .socials .icon {
+  width: 40px;
+  height: 40px;
+  border: 1px solid;
+  border-radius: 50%;
+  margin-right: 24px;
+  padding: 5px;
+}
+footer ul {
+  margin-left: -14px;
+  list-style: disc !important;
+}
+footer ul li {
+  padding: 2px 0px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+footer .inputs {
+  position: relative;
+  margin-top: 20px;
+}
+footer .inputs .form-control {
+  height: 60px;
+}
+footer .inputs button {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  height: 42px;
+  background-color: #3d67ed;
+}
+footer .inputs button:hover {
+  background-color: #203471;
+}
+footer i {
+  color: white;
+}
+footer .copy {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  footer .foot-box {
+    margin: 20px 0;
+  }
+  footer .copy {
+    text-align: center;
+    line-height: 2;
+    display: block;
   }
 }/*# sourceMappingURL=globals.css.map */

@@ -4,6 +4,7 @@ const HomePage = lazy(() => import("./HomePage"));
 import Services from "../Sections/Services";
 import Doctors from "../Sections/Doctors";
 import Loading from "../Loading/Loading";
+import Footer from "../common/Footer";
 
 const Index = () => {
   return (
@@ -13,6 +14,7 @@ const Index = () => {
       </Suspense>
       <Services />
       <Doctors />
+      <Footer />
     </>
   );
 };

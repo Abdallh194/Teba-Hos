@@ -1,0 +1,99 @@
+.Services {
+  margin-top: 80px;
+  .TextCard {
+    padding: 15px;
+  }
+  .service-Numbers {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 50px;
+    .num {
+      background-color: $blue-color;
+      color: white;
+      height: 82px;
+      width: 82px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      font-weight: 900;
+      margin: auto;
+    }
+    .name {
+      font-size: 18px;
+      font-weight: 700;
+      margin-top: 11px;
+    }
+  }
+  .head {
+    font-size: 66px;
+    color: #3d67ed;
+    font-weight: 800;
+    line-height: 1.3;
+  }
+  .info {
+    margin-top: 32px;
+    color: #313131;
+    font-size: 17px;
+  }
+  .browse {
+    background-color: $blue-color;
+    width: 50%;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    padding: 11px 0;
+    color: white;
+    margin-top: 46px;
+    font-weight: 600;
+    font-size: 19px;
+  }
+  @media (max-width: 1400px) {
+    .head {
+      font-size: 53px;
+    }
+    .info {
+      margin-top: 11px;
+    }
+    .service-Numbers {
+      margin-top: 25px;
+    }
+    .browse {
+      margin-top: 30px;
+    }
+    .ImageCard {
+      .img-fluid {
+        height: 100%;
+      }
+    }
+  }
+  @media (max-width: 1200px) {
+    .head {
+      font-size: 42px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    margin-top: 0;
+    .service-Numbers {
+      .num {
+        height: 70px;
+        width: 70px;
+        font-size: 21px;
+        font-weight: 600;
+      }
+      .name {
+        font-size: 13px;
+      }
+      .details {
+        width: 25%;
+      }
+    }
+    .browse {
+      margin: 30px auto;
+      width: 100%;
+    }
+  }
+}

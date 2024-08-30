@@ -11,6 +11,7 @@
 
 $blue-color: #3d67ed;
 $darkblue-color: #203471;
+$aqua-color: #70bfd7;
 $logo-font: "Pacifico";
 
 //global classes
@@ -20,6 +21,18 @@ a {
   text-decoration: none !important;
 }
 
+.Cus_Margin_Padding {
+  padding: 40px 0;
+  margin-top: 40px;
+  @media (max-width: 992px) {
+    margin-top: 0;
+  }
+}
+
 //import assest pages style
 @import "Assests/HomePage";
 @import "Assests/Navbar";
+@import "Assests/Services";
+@import "Assests/Doctors";
+@import "Assests/ExpertDoctors";
+@import "Assests/Footer";

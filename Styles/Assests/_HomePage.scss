@@ -2,7 +2,7 @@
   background: url("/home_bg.jpg");
   background-size: cover;
   background-position-y: 200px;
-  height: 910px;
+  height: 100vh;
   text-align: center;
   position: relative;
   .overlay {
@@ -15,11 +15,10 @@
       to bottom,
       $blue-color,
       $blue-color,
-      transparent,
-      transparent
+      #0000004f,
+      #0000004f
     );
   }
-
   .stHead {
     margin-top: 190px;
   }
@@ -103,7 +102,7 @@
       }
     }
     .stHead {
-      margin-top: 63px;
+      margin-top: 104px;
     }
     .info {
       font-size: 17px;

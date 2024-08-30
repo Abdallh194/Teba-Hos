@@ -1,0 +1,70 @@
+.ExpertDoctors {
+  .header {
+    font-size: 37px;
+    letter-spacing: 6px;
+    margin: 20px 0;
+    text-align: center;
+  }
+  .DoctorCard {
+    border-radius: 8px;
+    margin: 10px auto;
+    overflow: hidden;
+    padding: 0;
+    transition: 0.5s;
+    width: calc(25% - 20px);
+    .img-fluid {
+      display: block;
+      position: relative;
+      top: 0;
+      transition: 0.5s;
+    }
+    .doctorDetails {
+      background-color: #eff5ff;
+      height: 100px;
+      padding: 30px;
+      position: relative;
+      text-align: center;
+      transition: 0.5s;
+      z-index: 1;
+      .name {
+        font-size: 1.25rem;
+        letter-spacing: 2px;
+        font-weight: 700;
+      }
+      .dep {
+        color: $blue-color;
+        padding: 5px 0;
+      }
+      .socials {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        font-size: 21px;
+      }
+    }
+    &:hover {
+      .doctorDetails {
+        height: 160px;
+        margin-top: -60px;
+      }
+      .img-fluid {
+        top: -17px;
+      }
+    }
+  }
+  @media (max-width: 992px) {
+    .DoctorCard {
+      width: 43%;
+    }
+  }
+  @media (max-width: 585px) {
+    margin-top: -40px;
+    .DoctorCard {
+      width: calc(100% - 40px);
+    }
+    .header {
+      font-size: 25px;
+      letter-spacing: 3px;
+    }
+  }
+}
