@@ -1,0 +1,22 @@
+.Socials {
+  .icon {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    .details {
+      margin-left: 10px;
+    }
+  }
+  .socials {
+    display: flex;
+    a {
+      color: black;
+    }
+    .icon {
+      width: 36px;
+      height: 36px;
+      margin-right: 24px;
+      padding: 5px;
+    }
+  }
+}

@@ -1,0 +1,112 @@
+.Guide {
+  height: 910px;
+  background: url("/guide_bg.jpg");
+  position: relative;
+  background-size: cover;
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.15);
+  }
+  .content {
+    width: 40%;
+    margin-top: 290px;
+  }
+  .subHead {
+    font-size: 19px;
+    letter-spacing: 2px;
+    span {
+      color: $green-color;
+    }
+  }
+  .head {
+    font-size: 42px;
+    font-weight: 700;
+    span {
+      color: $blue-color;
+    }
+  }
+  .bookBtn {
+    display: block;
+    background-color: $blue-color;
+    color: white;
+    font-size: 19px;
+    text-align: center;
+    width: 250px;
+    padding: 8px;
+    border-radius: 50px;
+    margin-top: 20px;
+  }
+  .GuideCard {
+    color: white;
+    padding: 30px;
+    text-align: center;
+    border-bottom: 2px solid white;
+    .icon {
+      display: block;
+      margin: auto;
+      font-size: 47px;
+    }
+    .header {
+      font-size: 18px;
+      font-weight: 600;
+      margin-top: 23px;
+    }
+    .info {
+      color: #ffffff94;
+      margin-top: 12px;
+    }
+  }
+  .bg_Green {
+    background-color: $green-color;
+  }
+  .bg_Blue {
+    background-color: $blue-color;
+  }
+  .row {
+    margin-top: 151px;
+  }
+  @media (max-width: 1400px) {
+    .content {
+      width: 46%;
+    }
+  }
+  @media (max-width: 1200px) {
+    .content {
+      width: 52%;
+    }
+  }
+  @media (max-width: 992px) {
+    background-position-x: 76%;
+    .content {
+      width: 100%;
+    }
+  }
+  @media (max-width: 767px) {
+    .head {
+      font-size: 34px;
+    }
+    .content {
+      margin-top: 243px;
+    }
+    .GuideCard {
+      padding: 20px 5px;
+      .header {
+        font-size: 16px;
+        margin-top: 11px;
+      }
+      .info {
+        margin-top: 5px;
+      }
+      .icon {
+        font-size: 33px;
+      }
+    }
+    .bg_Blue {
+      border-left: 2px solid white;
+    }
+  }
+}

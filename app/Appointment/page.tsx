@@ -1,7 +1,7 @@
 import React from "react";
 
-const Book = () => {
+const Appointment = () => {
   return <div>Book</div>;
 };
 
-export default Book;
+export default Appointment;

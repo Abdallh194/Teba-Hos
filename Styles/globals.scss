@@ -12,6 +12,7 @@
 $blue-color: #3d67ed;
 $darkblue-color: #203471;
 $aqua-color: #70bfd7;
+$green-color: #32cd32;
 $logo-font: "Pacifico";
 
 //global classes
@@ -36,3 +37,8 @@ a {
 @import "Assests/Doctors";
 @import "Assests/ExpertDoctors";
 @import "Assests/Footer";
+@import "Assests/Guide";
+@import "Assests/GuideServices";
+@import "Assests/AddressInfo";
+@import "Assests/Socials";
+@import "Assests/Contact";

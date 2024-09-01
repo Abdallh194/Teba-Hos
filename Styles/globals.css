@@ -443,28 +443,6 @@ footer .head {
   font-weight: 600;
   margin-bottom: 20px;
 }
-footer .icon {
-  margin: 10px 0;
-  display: flex;
-  align-items: center;
-}
-footer .icon .details {
-  margin-left: 10px;
-}
-footer .socials {
-  display: flex;
-}
-footer .socials a {
-  color: white;
-}
-footer .socials .icon {
-  width: 40px;
-  height: 40px;
-  border: 1px solid;
-  border-radius: 50%;
-  margin-right: 24px;
-  padding: 5px;
-}
 footer ul {
   margin-left: -14px;
   list-style: disc !important;
@@ -506,5 +484,369 @@ footer .copy {
     text-align: center;
     line-height: 2;
     display: block;
+  }
+}
+
+.Guide {
+  height: 910px;
+  background: url("/guide_bg.jpg");
+  position: relative;
+  background-size: cover;
+}
+.Guide .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.Guide .content {
+  width: 40%;
+  margin-top: 290px;
+}
+.Guide .subHead {
+  font-size: 19px;
+  letter-spacing: 2px;
+}
+.Guide .subHead span {
+  color: #32cd32;
+}
+.Guide .head {
+  font-size: 42px;
+  font-weight: 700;
+}
+.Guide .head span {
+  color: #3d67ed;
+}
+.Guide .bookBtn {
+  display: block;
+  background-color: #3d67ed;
+  color: white;
+  font-size: 19px;
+  text-align: center;
+  width: 250px;
+  padding: 8px;
+  border-radius: 50px;
+  margin-top: 20px;
+}
+.Guide .GuideCard {
+  color: white;
+  padding: 30px;
+  text-align: center;
+  border-bottom: 2px solid white;
+}
+.Guide .GuideCard .icon {
+  display: block;
+  margin: auto;
+  font-size: 47px;
+}
+.Guide .GuideCard .header {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 23px;
+}
+.Guide .GuideCard .info {
+  color: rgba(255, 255, 255, 0.5803921569);
+  margin-top: 12px;
+}
+.Guide .bg_Green {
+  background-color: #32cd32;
+}
+.Guide .bg_Blue {
+  background-color: #3d67ed;
+}
+.Guide .row {
+  margin-top: 151px;
+}
+@media (max-width: 1400px) {
+  .Guide .content {
+    width: 46%;
+  }
+}
+@media (max-width: 1200px) {
+  .Guide .content {
+    width: 52%;
+  }
+}
+@media (max-width: 992px) {
+  .Guide {
+    background-position-x: 76%;
+  }
+  .Guide .content {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .Guide .head {
+    font-size: 34px;
+  }
+  .Guide .content {
+    margin-top: 243px;
+  }
+  .Guide .GuideCard {
+    padding: 20px 5px;
+  }
+  .Guide .GuideCard .header {
+    font-size: 16px;
+    margin-top: 11px;
+  }
+  .Guide .GuideCard .info {
+    margin-top: 5px;
+  }
+  .Guide .GuideCard .icon {
+    font-size: 33px;
+  }
+  .Guide .bg_Blue {
+    border-left: 2px solid white;
+  }
+}
+
+.GuideServices {
+  text-align: center;
+}
+.GuideServices .header {
+  font-size: 37px;
+  letter-spacing: 6px;
+  margin: 20px 0;
+}
+.GuideServices .GuideService_Card {
+  width: calc(20% - 20px);
+  margin: 10px auto;
+  padding: 10px 10px 25px 10px;
+  border-radius: 10px;
+  color: white;
+}
+.GuideServices .GuideService_Card .img-fluid {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.GuideServices .GuideService_Card .name {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+.GuideServices .GuideService_Card .info {
+  color: rgba(255, 255, 255, 0.833);
+  margin-top: 15px;
+}
+.GuideServices .bg_Blue {
+  background-color: #3d67ed;
+}
+.GuideServices .bg_Green {
+  background-color: #32cd32;
+}
+.GuideServices .About_Card {
+  background-color: #3d67ed;
+  margin-top: 110px;
+  padding: 70px 0;
+}
+.GuideServices .About_Card .content {
+  background-color: white;
+  text-align: left;
+  padding: 90px 40px;
+  transform: translateX(104px);
+  z-index: 1;
+}
+.GuideServices .About_Card .content hr {
+  margin: 3rem 0;
+}
+.GuideServices .About_Card .content .head {
+  font-size: 25px;
+  font-weight: 600;
+  color: #3d67ed;
+}
+.GuideServices .About_Card .content .msg {
+  margin-top: 20px;
+  font-size: 17px;
+  color: #7e7e7e;
+}
+.GuideServices .ImgCard {
+  background: url("/About_guide.jpg");
+  background-size: cover;
+}
+@media (max-width: 1400px) {
+  .GuideServices .GuideService_Card .name {
+    font-size: 17px;
+  }
+  .GuideServices .GuideService_Card .info {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1200px) {
+  .GuideServices .GuideService_Card {
+    width: calc(33.3333333333% - 30px);
+  }
+}
+@media (max-width: 992px) {
+  .GuideServices {
+    margin-top: 180px;
+  }
+  .GuideServices .About_Card {
+    padding: 30px;
+  }
+  .GuideServices .About_Card .content {
+    transform: translateX(0px);
+  }
+  .GuideServices .ImgCard {
+    height: 341px;
+    margin-top: 0 !important;
+  }
+}
+@media (max-width: 767px) {
+  .GuideServices {
+    margin-top: 30px;
+  }
+  .GuideServices .GuideService_Card {
+    width: calc(50% - 30px);
+  }
+}
+@media (max-width: 585px) {
+  .GuideServices {
+    margin-top: 80px;
+  }
+  .GuideServices .GuideService_Card {
+    width: calc(100% - 30px);
+  }
+  .GuideServices .About_Card {
+    margin-top: 50px;
+  }
+  .GuideServices .About_Card .content {
+    padding: 56px 19px;
+  }
+}
+
+.AddressInfo .AddressCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.AddressInfo .AddressCard .img-fluid {
+  display: block;
+  margin: auto;
+}
+.AddressInfo .AddressCard .head {
+  font-size: 25px;
+  text-align: center;
+  font-weight: 700;
+}
+.AddressInfo .AddressCard .downBtns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.AddressInfo .AddressCard .downBtns .playstore {
+  background-color: black;
+  cursor: pointer;
+  color: white;
+  margin: 10px;
+  padding: 8px 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+}
+.AddressInfo .AddressCard .downBtns .icon {
+  display: inline-block;
+  margin-left: 5px;
+}
+.AddressInfo .Socials .icon,
+.AddressInfo .Socials .socials {
+  justify-content: center;
+}
+@media (max-width: 992px) {
+  .AddressInfo .AddressCard {
+    margin-top: 30px;
+  }
+}
+
+.Socials .icon {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+.Socials .icon .details {
+  margin-left: 10px;
+}
+.Socials .socials {
+  display: flex;
+}
+.Socials .socials a {
+  color: black;
+}
+.Socials .socials .icon {
+  width: 36px;
+  height: 36px;
+  margin-right: 24px;
+  padding: 5px;
+}
+
+.Contact {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.Contact .ContactCard .img-fluid {
+  display: block;
+  margin: auto;
+}
+.Contact .img-card {
+  background: url("/contact.jpg");
+  background-size: cover;
+}
+.Contact .row {
+  margin-top: 50px;
+}
+.Contact .head {
+  font-size: 37px;
+}
+.Contact .info {
+  width: 68%;
+  font-size: 23px;
+  color: rgba(0, 0, 0, 0.49);
+  margin: 13px auto;
+}
+.Contact .line {
+  width: 100px;
+  height: 2px;
+  background-color: #3d67ed;
+  margin: 10px auto;
+}
+.Contact .text-feild {
+  display: flex;
+}
+.Contact .text-feild .wid-Haf {
+  width: 48%;
+}
+.Contact .form-control {
+  height: 50px;
+  margin: 10px auto;
+}
+.Contact .wid-ful {
+  width: 98%;
+}
+.Contact #msg {
+  resize: none;
+  height: 150px;
+  width: 98%;
+  margin: 20px auto;
+}
+.Contact #submit {
+  width: 98%;
+  margin: 10px auto;
+  height: 45px;
+  border: none;
+  background-color: #3d67ed;
+  color: white;
+}
+@media (max-width: 767px) {
+  .Contact .head {
+    font-size: 34px;
+  }
+  .Contact .info {
+    width: 90%;
+    font-size: 19px;
+  }
+  .Contact .line {
+    width: 174px;
   }
 }/*# sourceMappingURL=globals.css.map */

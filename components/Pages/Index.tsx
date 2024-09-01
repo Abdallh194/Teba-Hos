@@ -1,10 +1,13 @@
-import React, { lazy, Suspense } from "react";
+import React, { Suspense } from "react";
 
-const HomePage = lazy(() => import("./HomePage"));
+import HomePage from "./HomePage";
 import Services from "../Sections/Services";
 import Doctors from "../Sections/Doctors";
-import Loading from "../Loading/Loading";
+
 import Footer from "../common/Footer";
+
+import Loading from "@/app/loading";
+import Contact from "../Sections/Contact";
 
 const Index = () => {
   return (
@@ -14,6 +17,7 @@ const Index = () => {
       </Suspense>
       <Services />
       <Doctors />
+      <Contact />
       <Footer />
     </>
   );

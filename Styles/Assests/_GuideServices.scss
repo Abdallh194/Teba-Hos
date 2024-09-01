@@ -1,0 +1,112 @@
+.GuideServices {
+  text-align: center;
+  .header {
+    font-size: 37px;
+    letter-spacing: 6px;
+    margin: 20px 0;
+  }
+  .GuideService_Card {
+    width: calc(100% / 5 - 20px);
+    margin: 10px auto;
+    padding: 10px 10px 25px 10px;
+
+    border-radius: 10px;
+    color: white;
+    .img-fluid {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+    .name {
+      font-size: 20px;
+      font-weight: 600;
+      margin-top: 20px;
+    }
+    .info {
+      color: rgba(255, 255, 255, 0.833);
+      margin-top: 15px;
+    }
+  }
+  .bg_Blue {
+    background-color: $blue-color;
+  }
+
+  .bg_Green {
+    background-color: $green-color;
+  }
+  .About_Card {
+    background-color: $blue-color;
+    margin-top: 110px;
+    padding: 70px 0;
+    .content {
+      background-color: white;
+      text-align: left;
+      padding: 90px 40px;
+      transform: translateX(104px);
+      z-index: 1;
+      hr {
+        margin: 3rem 0;
+      }
+      .head {
+        font-size: 25px;
+        font-weight: 600;
+        color: $blue-color;
+      }
+      .msg {
+        margin-top: 20px;
+        font-size: 17px;
+        color: #7e7e7e;
+      }
+    }
+  }
+  .ImgCard {
+    background: url("/About_guide.jpg");
+    background-size: cover;
+  }
+
+  @media (max-width: 1400px) {
+    .GuideService_Card {
+      .name {
+        font-size: 17px;
+      }
+      .info {
+        font-size: 14px;
+      }
+    }
+  }
+  @media (max-width: 1200px) {
+    .GuideService_Card {
+      width: calc(100% / 3 - 30px);
+    }
+  }
+  @media (max-width: 992px) {
+    margin-top: 180px;
+    .About_Card {
+      padding: 30px;
+      .content {
+        transform: translateX(0px);
+      }
+    }
+    .ImgCard {
+      height: 341px;
+      margin-top: 0 !important;
+    }
+  }
+  @media (max-width: 767px) {
+    margin-top: 30px;
+    .GuideService_Card {
+      width: calc(100% / 2 - 30px);
+    }
+  }
+  @media (max-width: 585px) {
+    margin-top: 80px;
+    .GuideService_Card {
+      width: calc(100% - 30px);
+    }
+    .About_Card {
+      margin-top: 50px;
+      .content {
+        padding: 56px 19px;
+      }
+    }
+  }
+}
