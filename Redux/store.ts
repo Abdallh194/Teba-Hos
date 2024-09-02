@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import GlobalState from "./features/GlobalState/GlobalSlice";
+import UserSlice from "./features/User/UserSlice";
 
 export const makeStore = () => {
   return configureStore({
     reducer: {
       ASR: GlobalState,
+      User: UserSlice,
     },
   });
 };

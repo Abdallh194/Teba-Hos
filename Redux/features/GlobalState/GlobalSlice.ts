@@ -14,10 +14,8 @@ const initialState: IGlobalState = {
 const GlobalState = createSlice({
   name: "GlobalState",
   initialState,
-  reducers: {
-    ActiveLoggin: (state) => {},
-  },
+  reducers: {},
 });
 
-export const { ActiveLoggin } = GlobalState.actions;
+// export const { ActiveLoggin } = GlobalState.actions;
 export default GlobalState.reducer;

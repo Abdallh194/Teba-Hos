@@ -849,4 +849,159 @@ footer .copy {
   .Contact .line {
     width: 174px;
   }
+}
+
+.Login {
+  background: url("/login.jpg");
+  background-size: cover;
+  position: relative;
+  height: 100vh;
+  background-position-x: 50%;
+}
+.Login .overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+.Login .container {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.Login .header {
+  font-size: 52px;
+  font-weight: 700;
+}
+.Login .subHeader {
+  font-size: 27px;
+  margin-top: -3px;
+  letter-spacing: 1px;
+}
+.Login .info {
+  color: #ededed;
+  font-size: 17px;
+  margin-top: 19px;
+}
+.Login form {
+  margin-top: 40px;
+}
+.Login .Lable {
+  font-size: 18px;
+  margin-top: 15px;
+}
+.Login .form-control {
+  height: 50px;
+}
+.Login #submit {
+  display: block;
+  width: 150px;
+  color: white;
+}
+.Login .registerBtn {
+  text-decoration: underline !important;
+  color: black;
+  display: block;
+  margin-top: 10px;
+}
+.Login .formCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (max-width: 992px) {
+  .Login {
+    height: 140vh;
+  }
+  .Login .header {
+    font-size: 46px;
+  }
+  .Login .lottieCard {
+    margin-top: 50px;
+  }
+}
+
+.Register {
+  background: url("/login.jpg");
+  background-size: cover;
+  position: relative;
+  height: 100vh;
+  background-position-x: 50%;
+}
+.Register .overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+.Register .container {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  max-width: 1450px;
+}
+.Register .row {
+  width: 100%;
+}
+.Register .header {
+  font-size: 52px;
+  font-weight: 700;
+}
+.Register .info {
+  color: #ededed;
+  font-size: 17px;
+  margin-top: 5px;
+}
+.Register form {
+  margin-top: 30px;
+}
+.Register #submit {
+  display: block;
+  width: 250px;
+  padding: 8px;
+  color: white;
+  margin: 16px 0 0 7px;
+}
+.Register .fulLine {
+  display: flex;
+}
+.Register .fulLine .widHaf {
+  width: 48%;
+  margin: 5px auto;
+}
+.Register label {
+  font-size: 18px;
+}
+.Register .form-control,
+.Register select {
+  height: 50px;
+}
+.Register .AnimationCard {
+  display: flex;
+  margin-top: 33px;
+}
+@media (max-width: 992px) {
+  .Register {
+    height: 149vh;
+  }
+}
+@media (max-width: 767px) {
+  .Register {
+    height: 205vh;
+  }
+  .Register .fulLine {
+    display: block;
+  }
+  .Register .fulLine .widHaf {
+    width: 100%;
+  }
+  .Register .AnimationCard {
+    margin-top: 50px;
+  }
 }/*# sourceMappingURL=globals.css.map */
