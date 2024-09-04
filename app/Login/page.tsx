@@ -19,9 +19,14 @@ const Login = () => {
   const router = useRouter();
 
   //selector
-  const { GlobalPassword, GlobalUserName, newuser, isLoggin } = useAppSelector(
-    (state) => state.User
-  );
+  const {
+    GlobalPassword,
+    GlobalUserName,
+    newuser,
+    isLoggin,
+    IsComeFromAppointment,
+    UserMajor,
+  } = useAppSelector((state) => state.User);
   //states
   const [isLoginError, setisLoginError] = useState(false);
 
@@ -42,9 +47,15 @@ const Login = () => {
       (data.email === GlobalUserName && data.password === GlobalPassword) ||
       (data.email === newuser.Email && data.password === newuser.Password)
     ) {
-      dispatch(SwithLoggin());
-      setisLoginError(false);
-      router.push("/UserProfile");
+      if (IsComeFromAppointment === true) {
+        dispatch(SwithLoggin());
+        setisLoginError(false);
+        router.push(`/Appointment/${UserMajor}`);
+      } else {
+        dispatch(SwithLoggin());
+        setisLoginError(false);
+        router.push("/UserProfile");
+      }
     } else {
       setisLoginError(true);
       console.log("eror");
@@ -52,7 +63,7 @@ const Login = () => {
   };
   return (
     <>
-      {isLoggin ? (
+      {isLoggin && IsComeFromAppointment === false ? (
         router.push("/UserProfile")
       ) : (
         <div className="Login">

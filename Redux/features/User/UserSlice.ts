@@ -12,10 +12,17 @@ export interface IUserState {
     Gender: string;
     confirmPassword: string;
   };
+  AppointmentDetails: {
+    DonctorName: string;
+    dep: string;
+    id: string;
+  };
   GlobalUserName: string;
   GlobalPassword: string;
   isLoggin: boolean;
   Isthisemailavailable: boolean;
+  IsComeFromAppointment: boolean;
+  UserMajor: string;
 }
 const initialState: IUserState = {
   newuser: {
@@ -29,10 +36,17 @@ const initialState: IUserState = {
     Gender: "Male",
     confirmPassword: "s121",
   },
+  AppointmentDetails: {
+    dep: "Appointment Department",
+    DonctorName: "Ali Maher",
+    id: "1",
+  },
   GlobalUserName: "abdallhsabry194@gmail.com",
   GlobalPassword: "12345678",
   isLoggin: false,
   Isthisemailavailable: true,
+  IsComeFromAppointment: false,
+  UserMajor: "1",
 };
 
 const UserState = createSlice({
@@ -52,9 +66,30 @@ const UserState = createSlice({
         state.Isthisemailavailable = true;
       }
     },
+    SwitchLoginPass: (state) => {
+      state.IsComeFromAppointment = !state.IsComeFromAppointment;
+    },
+    SetUserMajor: (state, action) => {
+      state.UserMajor = action.payload;
+    },
+    AddAppointment: (state, action) => {
+      state.AppointmentDetails = action.payload;
+    },
+    CancelAppointment: (state) => {
+      state.AppointmentDetails.DonctorName = "";
+      state.AppointmentDetails.dep = "";
+      state.AppointmentDetails.id = "";
+    },
   },
 });
 
-export const { SwithLoggin, AddNewUser, CheckEmailavailable } =
-  UserState.actions;
+export const {
+  SwithLoggin,
+  AddNewUser,
+  CheckEmailavailable,
+  SwitchLoginPass,
+  SetUserMajor,
+  AddAppointment,
+  CancelAppointment,
+} = UserState.actions;
 export default UserState.reducer;

@@ -1,0 +1,79 @@
+.Appointment {
+  margin-bottom: 30px;
+  .header {
+    align-items: center;
+    background-image: linear-gradient(
+      140deg,
+      #eadedb,
+      #bc7070 50%,
+      #41aed6 75%
+    );
+    display: flex;
+    height: 350px;
+    justify-content: center;
+    text-align: center;
+    color: hsla(0, 0%, 100%, 0.541);
+    font-size: 120px;
+    font-weight: 900;
+  }
+  .chooseHeader {
+    text-align: center;
+    margin: 30px 0 15px 0;
+    font-size: 31px;
+    font-weight: 600;
+    letter-spacing: 3px;
+  }
+  .MajorCard {
+    background: url("/btn.png");
+    background-size: cover;
+    text-align: center;
+    padding: 20px;
+    width: calc(100% / 4 - 20px);
+    margin: 10px auto;
+    transition: 0.2s;
+    &:hover {
+      transform: scale(1.05);
+    }
+    .icon {
+      display: block;
+      margin: auto;
+      width: 50px;
+      height: 50px;
+      clip-path: polygon(
+        30% 0%,
+        70% 0%,
+        100% 30%,
+        100% 70%,
+        70% 100%,
+        30% 100%,
+        0% 70%,
+        0% 30%
+      );
+      background-color: #22b29a;
+      color: white;
+      padding: 9px;
+    }
+    .majorName {
+      margin-top: 8px;
+      font-size: 17px;
+      font-weight: 500;
+    }
+  }
+  @media (max-width: 992px) {
+    .MajorCard {
+      width: calc(100% / 2 - 40px);
+      margin: 20px auto;
+    }
+  }
+  @media (max-width: 757px) {
+    .header {
+      height: 280px;
+      font-size: 90px;
+    }
+    .MajorCard {
+      padding: 20px 0;
+      width: calc(50% - 5px);
+      margin: 2px auto;
+    }
+  }
+}

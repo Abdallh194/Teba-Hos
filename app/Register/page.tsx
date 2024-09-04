@@ -17,6 +17,7 @@ import {
 } from "@/Redux/features/User/UserSlice";
 import { useRouter } from "next/navigation";
 import { Alert } from "@mui/material";
+import Link from "next/link";
 
 const Register = () => {
   //dispatch
@@ -197,6 +198,9 @@ const Register = () => {
                     <Button variant="primary" type="submit" id="submit">
                       Submit
                     </Button>
+                    <Link href="/Login" className="LoginBtn">
+                      Do you already have an account? Log in now
+                    </Link>
                   </Form>
                   {isRegisterError && (
                     <Alert

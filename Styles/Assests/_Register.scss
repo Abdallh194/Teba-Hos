@@ -55,6 +55,12 @@
   select {
     height: 50px;
   }
+  .LoginBtn {
+    text-decoration: underline !important;
+    color: black;
+    display: block;
+    margin-top: 10px;
+  }
   .AnimationCard {
     display: flex;
     margin-top: 33px;
