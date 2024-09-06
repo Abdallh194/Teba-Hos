@@ -1,0 +1,43 @@
+.Left-SideBar {
+  color: white;
+  padding-left: 30px;
+  background-color: #02081a;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  .logo {
+    display: flex;
+    margin-left: 6px;
+    color: white;
+    font-size: 38px;
+    font-family: $logo-font;
+  }
+  .menu {
+    margin-left: 20px;
+    margin-top: 30px;
+  }
+  .Links {
+    .item {
+      display: flex;
+      align-items: center;
+      margin-top: 9px;
+      cursor: pointer;
+      color: #fff;
+      font-size: 20px;
+      font-weight: 200;
+    }
+  }
+  .socialHead {
+    margin-top: 40px;
+  }
+  .Socials .socials a {
+    color: white;
+  }
+  @media (max-width: 992px) {
+    position: relative;
+    padding: 60px 0;
+    height: fit-content;
+  }
+}

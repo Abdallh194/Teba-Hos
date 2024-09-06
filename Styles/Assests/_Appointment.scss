@@ -72,8 +72,12 @@
     }
     .MajorCard {
       padding: 20px 0;
-      width: calc(50% - 5px);
-      margin: 2px auto;
+      width: calc(48% - 9px);
+      margin: 9px auto;
+      .majorName {
+        margin-top: 9px;
+        font-size: 15px;
+      }
     }
   }
 }

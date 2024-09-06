@@ -1,0 +1,51 @@
+.AppoientmentDetails {
+  padding: 40px;
+  .Header {
+    margin-top: 95px;
+    font-size: 25px;
+    width: fit-content;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      background-color: #f78536;
+      height: 2px;
+      width: 30%;
+      left: 0;
+      bottom: 0;
+    }
+  }
+  .Appoientments {
+    display: flex;
+    margin-top: 40px;
+    justify-content: space-between;
+    .co {
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: 2px;
+        background-color: #cfcfcf;
+        left: -30px;
+        top: 0;
+      }
+    }
+    .Name {
+      font-size: 20px;
+      font-weight: 700;
+    }
+    .dlticon {
+      color: red;
+      background-color: transparent;
+    }
+  }
+  @media (max-width: 992px) {
+    .Appoientments {
+      display: block;
+      .co {
+        margin-top: 25px;
+      }
+    }
+  }
+}

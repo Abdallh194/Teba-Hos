@@ -1074,8 +1074,12 @@ footer .copy {
   }
   .Appointment .MajorCard {
     padding: 20px 0;
-    width: calc(50% - 5px);
-    margin: 2px auto;
+    width: calc(48% - 9px);
+    margin: 9px auto;
+  }
+  .Appointment .MajorCard .majorName {
+    margin-top: 9px;
+    font-size: 15px;
   }
 }
 
@@ -1118,8 +1122,8 @@ footer .copy {
   font-size: 19px;
 }
 .Specialization .specializationCard .info {
-  margin-top: 20px;
-  color: rgba(255, 255, 255, 0.7294117647);
+  margin-top: 15px;
+  color: rgba(255, 255, 255, 0.6196078431);
 }
 .Specialization .specializationCard .BookBtn {
   background-image: linear-gradient(140deg, #eadedb, #bc7070 50%, #41aed6 75%);
@@ -1145,7 +1149,7 @@ footer .copy {
   color: white !important;
   text-decoration: underline !important;
   display: block;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 @media (max-width: 992px) {
   .Specialization .specializationCard {
@@ -1153,17 +1157,222 @@ footer .copy {
     margin: 20px auto;
   }
 }
-@media (max-width: 757px) {
+@media (max-width: 767px) {
   .Specialization .header {
     height: 240px;
     font-size: 49px;
   }
   .Specialization .head {
-    font-size: 26px;
+    font-size: 20px;
   }
   .Specialization .specializationCard {
-    padding: 20px 0;
-    width: calc(50% - 5px);
-    margin: 2px auto;
+    padding: 20px 6px;
+    width: calc(48% - 5px);
+    margin: 8px auto;
+  }
+  .Specialization .specializationCard .name {
+    font-size: 17px;
+  }
+}
+
+.UserProfile .Right-SideBar {
+  position: relative;
+  left: 25%;
+  padding: 0;
+}
+.UserProfile .Right-SideBar .name {
+  height: 300px;
+  background: url("/guide_bg.jpg");
+  background-size: cover;
+  position: relative;
+  background-position-y: 61%;
+}
+.UserProfile .Right-SideBar .name .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  background-image: linear-gradient(140deg, hsla(12, 26%, 89%, 0.478), hsla(0, 36%, 59%, 0.262) 50%, hsla(196, 65%, 55%, 0.609) 75%);
+}
+.UserProfile .Right-SideBar .name .username {
+  font-size: 87px;
+  font-weight: 900;
+  color: rgba(2, 8, 26, 0.6509803922);
+}
+.UserProfile .Right-SideBar .name .avatar {
+  position: absolute;
+  bottom: -100px;
+  width: 200px;
+  height: 200px;
+  border: 15px solid white;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.UserProfile .Right-SideBar .personalInfo {
+  padding: 40px;
+}
+.UserProfile .Right-SideBar .infoHeader {
+  margin-top: 75px;
+  font-size: 25px;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+}
+.UserProfile .Right-SideBar .infoHeader::before {
+  position: absolute;
+  content: "";
+  background-color: #f78536;
+  height: 2px;
+  width: 30%;
+  left: 0;
+  bottom: 0;
+}
+.UserProfile .Right-SideBar .InformationDetails {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.UserProfile .Right-SideBar .InformationDetails .head {
+  font-size: 20px;
+  font-weight: 700;
+}
+.UserProfile .Right-SideBar .LogoutBtn {
+  height: -moz-fit-content;
+  height: fit-content;
+  display: block;
+  position: absolute;
+  right: 4%;
+  top: 28%;
+  width: 126px;
+  font-weight: 700;
+}
+@media (max-width: 992px) {
+  .UserProfile .row {
+    flex-direction: column-reverse;
+  }
+  .UserProfile .Right-SideBar {
+    left: 0;
+  }
+  .UserProfile .Right-SideBar .container {
+    max-width: 873px;
+  }
+}
+@media (max-width: 767px) {
+  .UserProfile .Right-SideBar .name {
+    height: 270px;
+  }
+  .UserProfile .Right-SideBar .name .username {
+    font-size: 48px;
+  }
+  .UserProfile .Right-SideBar .InformationDetails {
+    display: block;
+  }
+  .UserProfile .Right-SideBar .InformationDetails .head {
+    margin-top: 20px;
+  }
+  .UserProfile .Right-SideBar .personalInfo {
+    padding: 30px 5px;
+  }
+}
+
+.Left-SideBar {
+  color: white;
+  padding-left: 30px;
+  background-color: #02081a;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+}
+.Left-SideBar .logo {
+  display: flex;
+  margin-left: 6px;
+  color: white;
+  font-size: 38px;
+  font-family: "Pacifico";
+}
+.Left-SideBar .menu {
+  margin-left: 20px;
+  margin-top: 30px;
+}
+.Left-SideBar .Links .item {
+  display: flex;
+  align-items: center;
+  margin-top: 9px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 200;
+}
+.Left-SideBar .socialHead {
+  margin-top: 40px;
+}
+.Left-SideBar .Socials .socials a {
+  color: white;
+}
+@media (max-width: 992px) {
+  .Left-SideBar {
+    position: relative;
+    padding: 60px 0;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+
+.AppoientmentDetails {
+  padding: 40px;
+}
+.AppoientmentDetails .Header {
+  margin-top: 95px;
+  font-size: 25px;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+}
+.AppoientmentDetails .Header::before {
+  position: absolute;
+  content: "";
+  background-color: #f78536;
+  height: 2px;
+  width: 30%;
+  left: 0;
+  bottom: 0;
+}
+.AppoientmentDetails .Appoientments {
+  display: flex;
+  margin-top: 40px;
+  justify-content: space-between;
+}
+.AppoientmentDetails .Appoientments .co {
+  position: relative;
+}
+.AppoientmentDetails .Appoientments .co::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 2px;
+  background-color: #cfcfcf;
+  left: -30px;
+  top: 0;
+}
+.AppoientmentDetails .Appoientments .Name {
+  font-size: 20px;
+  font-weight: 700;
+}
+.AppoientmentDetails .Appoientments .dlticon {
+  color: red;
+  background-color: transparent;
+}
+@media (max-width: 992px) {
+  .AppoientmentDetails .Appoientments {
+    display: block;
+  }
+  .AppoientmentDetails .Appoientments .co {
+    margin-top: 25px;
   }
 }/*# sourceMappingURL=globals.css.map */

@@ -36,11 +36,11 @@ function AppBar() {
             <Nav.Link as={Link} href="#Doctors">
               Doctors
             </Nav.Link>
-            <Nav.Link as={Link} href="/Appointment">
-              Book Appointment
-            </Nav.Link>
             <Nav.Link as={Link} href="#Contact">
               Contact Us
+            </Nav.Link>
+            <Nav.Link as={Link} href="/Appointment">
+              Book Appointment
             </Nav.Link>
           </Nav>
           <Nav className="LoginBtns">

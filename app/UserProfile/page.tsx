@@ -1,33 +1,35 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 
 import { useAppDispatch, useAppSelector } from "@/Redux/hooks";
 import { useRouter } from "next/navigation";
-import { Button } from "react-bootstrap";
-import { SwithLoggin } from "@/Redux/features/User/UserSlice";
+import { Col, Container, Row } from "react-bootstrap";
+import LeftSideBar from "@/components/Sections/LeftSideBar";
+import RightSideBar from "@/components/Sections/RightSideBar";
 const UserProfile = () => {
   //selector
-  const { isLoggin } = useAppSelector((s) => s.User);
+  const { isLoggin, newuser } = useAppSelector((s) => s.User);
 
   //router
   const router = useRouter();
 
-  //dispatch
-  const dispatch = useAppDispatch();
+  const [UserSelect, setUserSelect] = useState(true);
 
   return (
     <>
       {isLoggin ? (
-        <div>
-          <h1>User Profile</h1>
-          <Button
-            onClick={() => {
-              dispatch(SwithLoggin());
-            }}
-          >
-            Logiout
-          </Button>
+        <div className="UserProfile">
+          <Container fluid>
+            <Row>
+              <Col lg={3} md={12} className="Left-SideBar">
+                <LeftSideBar setUserSelect={setUserSelect} />
+              </Col>
+              <Col lg={9} md={12} className="Right-SideBar">
+                <RightSideBar newuser={newuser} UserSelect={UserSelect} />
+              </Col>
+            </Row>
+          </Container>
         </div>
       ) : (
         router.push("/")

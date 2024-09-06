@@ -39,7 +39,7 @@ const initialState: IUserState = {
   AppointmentDetails: {
     dep: "Appointment Department",
     DonctorName: "Ali Maher",
-    id: "1",
+    id: "0",
   },
   GlobalUserName: "abdallhsabry194@gmail.com",
   GlobalPassword: "12345678",
@@ -76,9 +76,7 @@ const UserState = createSlice({
       state.AppointmentDetails = action.payload;
     },
     CancelAppointment: (state) => {
-      state.AppointmentDetails.DonctorName = "";
-      state.AppointmentDetails.dep = "";
-      state.AppointmentDetails.id = "";
+      state.AppointmentDetails.id = "0";
     },
   },
 });

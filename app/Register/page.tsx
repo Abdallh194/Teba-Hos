@@ -24,7 +24,8 @@ const Register = () => {
   const dispatch = useAppDispatch();
 
   //selector
-  const { Isthisemailavailable, isLoggin } = useAppSelector((s) => s.User);
+  const { Isthisemailavailable, isLoggin, IsComeFromAppointment, UserMajor } =
+    useAppSelector((s) => s.User);
 
   //router
   const router = useRouter();
@@ -44,16 +45,22 @@ const Register = () => {
   //submit form
   const SubmitForm: SubmitHandler<RegisterType> = (data) => {
     if (Isthisemailavailable === true) {
-      dispatch(AddNewUser(data));
-      dispatch(SwithLoggin());
-      router.push("/UserProfile");
+      if (IsComeFromAppointment === true) {
+        dispatch(AddNewUser(data));
+        dispatch(SwithLoggin());
+        router.push(`/Appointment/${UserMajor}`);
+      } else {
+        dispatch(AddNewUser(data));
+        dispatch(SwithLoggin());
+        router.push("/UserProfile");
+      }
     } else {
       setisRegisterError(true);
     }
   };
   return (
     <>
-      {isLoggin ? (
+      {isLoggin && IsComeFromAppointment === false ? (
         router.push("/UserProfile")
       ) : (
         <div className="Register">

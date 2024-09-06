@@ -42,8 +42,8 @@
       font-size: 19px;
     }
     .info {
-      margin-top: 20px;
-      color: #ffffffba;
+      margin-top: 15px;
+      color: #ffffff9e;
     }
     .BookBtn {
       background-image: linear-gradient(
@@ -75,7 +75,7 @@
     color: white !important;
     text-decoration: underline !important;
     display: block;
-    margin-top: 10px;
+    margin-top: 20px;
   }
   @media (max-width: 992px) {
     .specializationCard {
@@ -83,18 +83,21 @@
       margin: 20px auto;
     }
   }
-  @media (max-width: 757px) {
+  @media (max-width: 767px) {
     .header {
       height: 240px;
       font-size: 49px;
     }
     .head {
-      font-size: 26px;
+      font-size: 20px;
     }
     .specializationCard {
-      padding: 20px 0;
-      width: calc(50% - 5px);
-      margin: 2px auto;
+      padding: 20px 6px;
+      width: calc(48% - 5px);
+      margin: 8px auto;
+      .name {
+        font-size: 17px;
+      }
     }
   }
 }

@@ -1,0 +1,111 @@
+.UserProfile {
+  .Right-SideBar {
+    position: relative;
+    left: 25%;
+    padding: 0;
+
+    .name {
+      height: 300px;
+      background: url("/guide_bg.jpg");
+      background-size: cover;
+      position: relative;
+      background-position-y: 61%;
+      .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        background-image: linear-gradient(
+          140deg,
+          hsla(12, 26%, 89%, 0.478),
+          hsla(0, 36%, 59%, 0.262) 50%,
+          hsla(196, 65%, 55%, 0.609) 75%
+        );
+      }
+      .username {
+        font-size: 87px;
+        font-weight: 900;
+        color: #02081aa6;
+      }
+      .avatar {
+        position: absolute;
+        bottom: -100px;
+        width: 200px;
+        height: 200px;
+        border: 15px solid white;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    .personalInfo {
+      padding: 40px;
+    }
+    .infoHeader {
+      margin-top: 75px;
+      font-size: 25px;
+      width: fit-content;
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "";
+        background-color: #f78536;
+        height: 2px;
+        width: 30%;
+        left: 0;
+        bottom: 0;
+      }
+    }
+    .InformationDetails {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      .head {
+        font-size: 20px;
+        font-weight: 700;
+      }
+    }
+    .LogoutBtn {
+      height: fit-content;
+      display: block;
+      position: absolute;
+      right: 4%;
+      top: 28%;
+      width: 126px;
+      font-weight: 700;
+    }
+  }
+  @media (max-width: 992px) {
+    .row {
+      flex-direction: column-reverse;
+    }
+    .Right-SideBar {
+      left: 0;
+      .container {
+        max-width: 873px;
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    .Right-SideBar {
+      .name {
+        height: 270px;
+        .username {
+          font-size: 48px;
+        }
+      }
+      .InformationDetails {
+        display: block;
+        .head {
+          margin-top: 20px;
+        }
+      }
+      .personalInfo {
+        padding: 30px 5px;
+      }
+    }
+  }
+}
