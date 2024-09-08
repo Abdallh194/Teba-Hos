@@ -2,7 +2,12 @@
 "use client";
 import { memo, useEffect, useMemo, useState } from "react";
 //get constants
-import { DonctorsName, GeneralInof, Majors } from "@/constants/constants";
+import {
+  AvDates,
+  DonctorsName,
+  GeneralInof,
+  Majors,
+} from "@/constants/constants";
 
 //user action (Redux)
 import {
@@ -20,10 +25,17 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 //Bootstrap
-import { Container, Row, Modal, Button, Spinner } from "react-bootstrap";
+import { Container, Row, Modal, Button, Spinner, Nav } from "react-bootstrap";
 
 //icons
-import { FaCheckCircle } from "react-icons/fa";
+import { FaCheckCircle, FaPhone } from "react-icons/fa";
+import { BsFillGeoAltFill } from "react-icons/bs";
+import { GiMoneyStack } from "react-icons/gi";
+import { FaClock } from "react-icons/fa6";
+
+import Image from "next/image";
+import { Rating } from "@mui/material";
+import AvailableDates from "@/components/Sections/AvailableDates";
 
 const Details = ({ params }: { params: { id: string } }) => {
   //dispatch
@@ -57,6 +69,9 @@ const Details = ({ params }: { params: { id: string } }) => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  //book date
+  const [AVDate, setAVDate] = useState("");
+
   const specializationDetailHandlerr = useMemo(() => {
     const specializationDetailFillter = GeneralInof.filter(
       (e) => e.prefixId === params.id
@@ -82,16 +97,63 @@ const Details = ({ params }: { params: { id: string } }) => {
         );
       })}
       <Container>
-        <div className="head">Doctors Available for Booking an Appointment</div>
-        <Row>
-          {DonctorsName.map((e) => {
-            return (
-              <div className=" specializationCard" key={Math.random() * 10}>
-                <div className="name">Dr : {e}</div>
-                {specializationDetailHandlerr.map((sp) => {
-                  return (
-                    <div className="info" key={sp.prefixId}>
-                      {sp.Dep}
+        <div className="head">
+          Doctors Available for Booking an Appointment 15 Doctor
+        </div>
+
+        {DonctorsName.map((e) => {
+          return (
+            <Row className=" specializationCard" key={Math.random() * 10}>
+              {specializationDetailHandlerr.map((sp) => {
+                return (
+                  <div className="info" key={sp.prefixId}>
+                    <div className="img-container">
+                      <Image
+                        src={sp.imgsrc}
+                        alt={e}
+                        width={200}
+                        height={200}
+                        className="img-fluid"
+                      />
+                    </div>
+                    <div className="docDetails">
+                      <div className="name">
+                        Dr : <span>{e}</span>
+                      </div>
+                      <div className="dep">
+                        Specialization : <span> {sp.Dep}</span>
+                      </div>
+                      <div className="d-flex align-items-center">
+                        <Rating
+                          name="simple"
+                          value={5}
+                          style={{ direction: "ltr" }}
+                          className="rate"
+                        />
+                        <span style={{ marginTop: "8px", fontSize: "14px" }}>
+                          These ratings are based on customer reviews.
+                        </span>
+                      </div>
+                      <hr />
+                      <ul className="menu">
+                        <li className="item">
+                          <BsFillGeoAltFill style={{ marginRight: "8px" }} />
+                          His clinic is located inside the hospital.
+                        </li>
+                        <li className="item">
+                          <GiMoneyStack style={{ marginRight: "8px" }} />
+                          Examination price : <span>450 EGP</span>
+                        </li>
+                        <li className="item">
+                          <FaClock style={{ marginRight: "8px" }} />
+                          Waiting time : <span>15 Minute</span>
+                        </li>
+                        <li className="item">
+                          <FaPhone style={{ marginRight: "8px" }} />
+                          For Inquiries : <span>+01091415560</span>
+                        </li>
+                        <li className="item"></li>
+                      </ul>
                       {isLoggin ? (
                         <Button
                           className="BookBtn"
@@ -102,6 +164,7 @@ const Details = ({ params }: { params: { id: string } }) => {
                               DonctorName: e,
                               dep: sp.Dep,
                               id: sp.prefixId,
+                              date: AVDate,
                             };
 
                             dispatch(AddAppointment(Data));
@@ -131,12 +194,13 @@ const Details = ({ params }: { params: { id: string } }) => {
                         </Link>
                       )}
                     </div>
-                  );
-                })}
-              </div>
-            );
-          })}
-        </Row>
+                    <AvailableDates setAVDate={setAVDate} />
+                  </div>
+                );
+              })}
+            </Row>
+          );
+        })}
       </Container>
       {EnaleModal && (
         <Modal

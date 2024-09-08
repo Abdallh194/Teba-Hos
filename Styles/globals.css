@@ -1037,6 +1037,7 @@ footer .copy {
   background: url("/btn.png");
   background-size: cover;
   text-align: center;
+  color: black;
   padding: 20px;
   width: calc(25% - 20px);
   margin: 10px auto;
@@ -1053,7 +1054,6 @@ footer .copy {
   -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
           clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
   background-color: #22b29a;
-  color: white;
   padding: 9px;
 }
 .Appointment .MajorCard .majorName {
@@ -1074,12 +1074,13 @@ footer .copy {
   }
   .Appointment .MajorCard {
     padding: 20px 0;
-    width: calc(48% - 9px);
-    margin: 9px auto;
+    width: calc(90% - 9px);
+    margin: 10px auto;
   }
   .Appointment .MajorCard .majorName {
     margin-top: 9px;
-    font-size: 15px;
+    font-size: 18px;
+    font-weight: 700;
   }
 }
 
@@ -1108,31 +1109,60 @@ footer .copy {
 .Specialization .specializationCard {
   background: url("/details.png");
   background-size: cover;
-  width: calc(25% - 20px);
   margin: 10px auto;
   padding: 20px;
   background-color: #464646;
   color: white;
-  text-align: center;
   border-radius: 5px;
   transition: 0.2s;
 }
-.Specialization .specializationCard .name {
+.Specialization .specializationCard .name span {
   font-weight: 600;
   font-size: 19px;
+  color: white;
+}
+.Specialization .specializationCard .dep span {
+  color: white;
+  font-weight: 600;
+}
+.Specialization .specializationCard .rate {
+  margin-top: 8px;
+  font-size: 23px;
+  margin-right: 18px;
+}
+.Specialization .specializationCard .menu {
+  margin-left: -30px;
+}
+.Specialization .specializationCard .menu .item {
+  display: flex;
+  align-items: center;
+  padding: 2px 0;
+}
+.Specialization .specializationCard .menu .item span {
+  color: white;
 }
 .Specialization .specializationCard .info {
   margin-top: 15px;
   color: rgba(255, 255, 255, 0.6196078431);
+  display: flex;
+}
+.Specialization .specializationCard .info .img-container {
+  width: 17%;
+}
+.Specialization .specializationCard .info .docDetails {
+  width: 58%;
+  position: relative;
 }
 .Specialization .specializationCard .BookBtn {
   background-image: linear-gradient(140deg, #eadedb, #bc7070 50%, #41aed6 75%);
+  position: absolute;
   padding: 7px;
-  width: 140px;
+  right: 8%;
+  top: 68%;
+  width: 183px;
   color: white;
   font-weight: 600;
   border-radius: 7px;
-  margin: 10px auto;
   margin-top: 20px;
   cursor: pointer;
   -webkit-user-select: none;
@@ -1151,10 +1181,78 @@ footer .copy {
   display: block;
   margin-top: 20px;
 }
+.Specialization .Avdate {
+  width: 25%;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  position: relative;
+}
+.Specialization .Avdate::before {
+  position: absolute;
+  content: "Choose the appropriate date";
+  bottom: -25px;
+  left: 0%;
+  width: 100%;
+  color: #41aed6;
+  transform: translateY(-50%);
+}
+.Specialization .Avdate span {
+  display: block;
+  padding: 3px 0;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.Specialization .Avdate span:hover {
+  background-color: #41aed6;
+}
+.Specialization .Avdate .dates {
+  padding: 5px;
+  border: 1px solid #eee;
+}
+.Specialization .Avdate .day {
+  margin: 5px auto;
+}
+.Specialization .Avdate .dateHead {
+  background-color: #bc7070;
+  border: 1px solid #bc7070;
+  color: white;
+  padding: 3px;
+}
+.Specialization .Avdate .datebook {
+  background-color: #41aed6;
+  border: 1px solid #41aed6;
+  color: white;
+  padding: 3px;
+}
+.Specialization .Avdate .active {
+  background-color: black !important;
+}
 @media (max-width: 992px) {
   .Specialization .specializationCard {
-    width: calc(50% - 40px);
+    padding-bottom: 90px;
+  }
+  .Specialization .specializationCard .BookBtn {
+    top: 204%;
+    left: 25%;
+    transform: translateY(-50%);
+  }
+  .Specialization .specializationCard .info {
+    display: block;
+  }
+  .Specialization .specializationCard .info .img-container {
+    display: flex;
+    justify-content: center;
+  }
+  .Specialization .specializationCard .info .docDetails {
+    margin-top: 30px;
+  }
+  .Specialization .specializationCard .info > * {
+    width: 100% !important;
+  }
+  .Specialization .Avdate .day {
     margin: 20px auto;
+    width: 31%;
   }
 }
 @media (max-width: 767px) {
@@ -1166,8 +1264,6 @@ footer .copy {
     font-size: 20px;
   }
   .Specialization .specializationCard {
-    padding: 20px 6px;
-    width: calc(48% - 5px);
     margin: 8px auto;
   }
   .Specialization .specializationCard .name {

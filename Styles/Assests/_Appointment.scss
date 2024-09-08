@@ -27,6 +27,7 @@
     background: url("/btn.png");
     background-size: cover;
     text-align: center;
+    color: black;
     padding: 20px;
     width: calc(100% / 4 - 20px);
     margin: 10px auto;
@@ -50,7 +51,7 @@
         0% 30%
       );
       background-color: #22b29a;
-      color: white;
+
       padding: 9px;
     }
     .majorName {
@@ -72,11 +73,12 @@
     }
     .MajorCard {
       padding: 20px 0;
-      width: calc(48% - 9px);
-      margin: 9px auto;
+      width: calc(90% - 9px);
+      margin: 10px auto;
       .majorName {
         margin-top: 9px;
-        font-size: 15px;
+        font-size: 18px;
+        font-weight: 700;
       }
     }
   }

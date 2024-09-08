@@ -10,17 +10,18 @@ type TAppointmentDet = {
     DonctorName: string;
     dep: string;
     id: string;
+    date: string;
   };
 };
 const Appointments = ({ AppointmentDetails }: TAppointmentDet) => {
-  //get date
-  const date = new Date();
+  // //get date
+  // const date = new Date();
 
-  let day = date.getDate() + 2;
-  let month = date.getMonth() + 1;
-  let year = date.getFullYear();
+  // let day = date.getDate() + 2;
+  // let month = date.getMonth() + 1;
+  // let year = date.getFullYear();
 
-  let currentDate = `${day}-${month}-${year}`;
+  // let currentDate = `${day}-${month}-${year}`;
 
   //dispatch
   const dispatch = useAppDispatch();
@@ -53,7 +54,7 @@ const Appointments = ({ AppointmentDetails }: TAppointmentDet) => {
           </div>
           <div className="co">
             <div className="Name">The Date You Attend Is</div>
-            <div className="doc">{currentDate} At 08:00 Am</div>
+            <div className="doc">{AppointmentDetails.date} </div>
           </div>
           <div className="co">
             <div className="Name">Cancel</div>

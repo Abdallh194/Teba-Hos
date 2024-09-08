@@ -60,109 +60,123 @@ export const DonctorsName = [
   "Michael Davis",
   "Christopher Rodriguez",
   "Matthew Moore",
+  "John Smith",
+  "Emily Brown",
+  "Michael Davis",
+  "Christopher Rodriguez",
+  "Matthew Moore",
 ];
 
 export const GeneralInof = [
   {
     prefixId: "1",
     Dep: "Consultant Pediatrician and Neonatologist",
+    imgsrc: "/team-2.jpg",
   },
   {
     prefixId: "2",
-
+    imgsrc: "/team-2.jpg",
     Dep: "Consultant Otorhinolaryngologist",
   },
   {
     prefixId: "3",
-
+    imgsrc: "/team-2.jpg",
     Dep: "Professor of General and Laparoscopic Surgery",
   },
   {
     prefixId: "4",
-
+    imgsrc: "/team-2.jpg",
     Dep: "Consultant Orthopedic and Fracture Surgery Master of Orthopedic Surgery",
   },
   {
     prefixId: "5",
-
+    imgsrc: "/team-2.jpg",
     Dep: "Consultant Dermatologist and Venereologist",
   },
   {
     prefixId: "6",
-
+    imgsrc: "/team-2.jpg",
     Dep: "Consultant Ophthalmologist",
   },
   {
     prefixId: "7",
-
+    imgsrc: "/team-2.jpg",
     Dep: "Consultant of chest and internal diseases",
   },
   {
     prefixId: "8",
-
+    imgsrc: "/team-2.jpg",
     Dep: "Oral and Maxillofacial Surgeon",
   },
   {
     prefixId: "9",
-
+    imgsrc: "/team-2.jpg",
     Dep: "Consultant of Internal Medicine and Cardiology",
   },
   {
     prefixId: "10",
-
+    imgsrc: "/team-2.jpg",
     Dep: "Hepatologist and gastrointestinal endoscopist",
   },
   {
     prefixId: "11",
-
+    imgsrc: "/team-2.jpg",
     Dep: "Diagnosis and Rehabilitation Consultant",
   },
   {
     prefixId: "12",
-
+    imgsrc: "/team-2.jpg",
     Dep: "Vascular Surgery Consultant",
   },
   {
     prefixId: "13",
-
+    imgsrc: "/team-2.jpg",
     Dep: "Professor of Internal Medicine and Nephrology",
   },
   {
     prefixId: "14",
-
+    imgsrc: "/team-2.jpg",
     Dep: "Consultant Pediatric and Neonatal Surgeon",
   },
   {
     prefixId: "15",
-
+    imgsrc: "/team-2.jpg",
     Dep: "Consultant of Obstetrics, Gynecology and IVF",
   },
   {
     prefixId: "16",
-
+    imgsrc: "/team-2.jpg",
     Dep: "Plastic Surgery Consultant",
   },
   {
     prefixId: "17",
-
+    imgsrc: "/team-2.jpg",
     Dep: "Consultant Endoscopist and Gastrointestinal Surgeon",
   },
   {
     prefixId: "18",
-
+    imgsrc: "/team-2.jpg",
     Dep: "Master of Urology and Andrology",
   },
   {
     prefixId: "19",
-
+    imgsrc: "/team-2.jpg",
     Dep: "Professor of Neurosurgery",
   },
 
   {
     prefixId: "20",
-
+    imgsrc: "/team-2.jpg",
     Dep: "Professor and Head of the Department of Oncology and Medicine",
   },
+];
+export const AvDates = [
+  "12:00 pm",
+  "12:30 pm",
+  "01:00 pm",
+  "02:00 pm",
+  "02:30 pm",
+  "03:30 pm",
 ];
 
 // export const specializationDetails = [

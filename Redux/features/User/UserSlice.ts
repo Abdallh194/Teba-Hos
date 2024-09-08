@@ -16,6 +16,7 @@ export interface IUserState {
     DonctorName: string;
     dep: string;
     id: string;
+    date: string;
   };
   GlobalUserName: string;
   GlobalPassword: string;
@@ -39,11 +40,12 @@ const initialState: IUserState = {
   AppointmentDetails: {
     dep: "Appointment Department",
     DonctorName: "Ali Maher",
+    date: "Today At 12 : 00 pm",
     id: "0",
   },
   GlobalUserName: "abdallhsabry194@gmail.com",
   GlobalPassword: "12345678",
-  isLoggin: false,
+  isLoggin: true,
   Isthisemailavailable: true,
   IsComeFromAppointment: false,
   UserMajor: "1",
