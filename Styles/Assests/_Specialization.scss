@@ -160,11 +160,15 @@
     }
   }
   @media (max-width: 992px) {
+    .errorAlert {
+      width: 94% !important;
+      right: 3% !important;
+    }
     .specializationCard {
       padding-bottom: 90px;
-      padding: 20px 10px;
+      padding: 20px 10px 90px 10px;
       .BookBtn {
-        top: 220%;
+        top: 210%;
         left: 25%;
         transform: translateY(-50%);
       }

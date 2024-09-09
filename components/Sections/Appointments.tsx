@@ -83,7 +83,13 @@ const Appointments = ({ AppointmentDetails }: TAppointmentDet) => {
       ) : (
         <p style={{ color: "red" }} className="mt-3">
           {" "}
-          No previous Appoientments <Link href="/Appointment">Book Now</Link>
+          No previous Appoientments{" "}
+          <Link
+            style={{ color: "blue", fontWeight: "bold" }}
+            href="/Appointment"
+          >
+            Book Now
+          </Link>
         </p>
       )}
     </div>

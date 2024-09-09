@@ -45,7 +45,7 @@ const initialState: IUserState = {
   },
   GlobalUserName: "abdallhsabry194@gmail.com",
   GlobalPassword: "12345678",
-  isLoggin: true,
+  isLoggin: false,
   Isthisemailavailable: true,
   IsComeFromAppointment: false,
   UserMajor: "1",

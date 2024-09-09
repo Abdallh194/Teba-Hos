@@ -105,6 +105,7 @@ const Details = ({ params }: { params: { id: string } }) => {
               right: "1%",
               zIndex: "3",
             }}
+            className="errorAlert"
             severity="error"
             variant="filled"
           >
