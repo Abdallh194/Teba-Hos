@@ -30,7 +30,7 @@
     background: url("/details.png");
     background-size: cover;
     margin: 10px auto;
-    padding: 20px;
+    padding: 30px 20px;
     background-color: #464646;
     color: white;
     border-radius: 5px;
@@ -53,9 +53,10 @@
       font-size: 23px;
       margin-right: 18px;
     }
+
     .menu {
       // margin: 14px 0 20px -30px;
-      margin-left: -30px;
+      // margin-left: -30px;
       .item {
         display: flex;
         align-items: center;
@@ -66,7 +67,6 @@
       }
     }
     .info {
-      margin-top: 15px;
       color: #ffffff9e;
       display: flex;
       .img-container {
@@ -121,7 +121,7 @@
     &::before {
       position: absolute;
       content: "Choose the appropriate date";
-      bottom: -25px;
+      bottom: -34px;
       left: 0%;
       width: 100%;
       color: #41aed6;
@@ -162,10 +162,17 @@
   @media (max-width: 992px) {
     .specializationCard {
       padding-bottom: 90px;
+      padding: 20px 10px;
       .BookBtn {
-        top: 204%;
+        top: 220%;
         left: 25%;
         transform: translateY(-50%);
+      }
+      // .menu {
+      margin-left: 0;
+      // }
+      .rateSec {
+        padding: 10px 0;
       }
       .info {
         display: block;

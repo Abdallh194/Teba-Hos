@@ -1,6 +1,7 @@
 import { CancelAppointment } from "@/Redux/features/User/UserSlice";
 import { useAppDispatch } from "@/Redux/hooks";
 import { Button } from "@mui/material";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { Spinner } from "react-bootstrap";
 
@@ -82,7 +83,7 @@ const Appointments = ({ AppointmentDetails }: TAppointmentDet) => {
       ) : (
         <p style={{ color: "red" }} className="mt-3">
           {" "}
-          No previous Appoientments
+          No previous Appoientments <Link href="/Appointment">Book Now</Link>
         </p>
       )}
     </div>

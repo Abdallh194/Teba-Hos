@@ -18,6 +18,10 @@ a {
   }
 }
 
+hr {
+  margin: 12px 0px !important;
+}
+
 .HoemPage {
   background: url("/home_bg.jpg");
   background-size: cover;
@@ -1110,7 +1114,7 @@ footer .copy {
   background: url("/details.png");
   background-size: cover;
   margin: 10px auto;
-  padding: 20px;
+  padding: 30px 20px;
   background-color: #464646;
   color: white;
   border-radius: 5px;
@@ -1130,9 +1134,6 @@ footer .copy {
   font-size: 23px;
   margin-right: 18px;
 }
-.Specialization .specializationCard .menu {
-  margin-left: -30px;
-}
 .Specialization .specializationCard .menu .item {
   display: flex;
   align-items: center;
@@ -1142,7 +1143,6 @@ footer .copy {
   color: white;
 }
 .Specialization .specializationCard .info {
-  margin-top: 15px;
   color: rgba(255, 255, 255, 0.6196078431);
   display: flex;
 }
@@ -1191,7 +1191,7 @@ footer .copy {
 .Specialization .Avdate::before {
   position: absolute;
   content: "Choose the appropriate date";
-  bottom: -25px;
+  bottom: -34px;
   left: 0%;
   width: 100%;
   color: #41aed6;
@@ -1231,11 +1231,16 @@ footer .copy {
 @media (max-width: 992px) {
   .Specialization .specializationCard {
     padding-bottom: 90px;
+    padding: 20px 10px;
+    margin-left: 0;
   }
   .Specialization .specializationCard .BookBtn {
-    top: 204%;
+    top: 220%;
     left: 25%;
     transform: translateY(-50%);
+  }
+  .Specialization .specializationCard .rateSec {
+    padding: 10px 0;
   }
   .Specialization .specializationCard .info {
     display: block;

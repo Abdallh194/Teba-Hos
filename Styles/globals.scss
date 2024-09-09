@@ -29,7 +29,9 @@ a {
     margin-top: 0;
   }
 }
-
+hr {
+  margin: 12px 0px !important;
+}
 //import assest pages style
 @import "Assests/HomePage";
 @import "Assests/Navbar";

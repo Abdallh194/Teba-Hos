@@ -2,12 +2,7 @@
 "use client";
 import { memo, useEffect, useMemo, useState } from "react";
 //get constants
-import {
-  AvDates,
-  DonctorsName,
-  GeneralInof,
-  Majors,
-} from "@/constants/constants";
+import { DonctorsName, GeneralInof, Majors } from "@/constants/constants";
 
 //user action (Redux)
 import {
@@ -34,7 +29,7 @@ import { GiMoneyStack } from "react-icons/gi";
 import { FaClock } from "react-icons/fa6";
 
 import Image from "next/image";
-import { Rating } from "@mui/material";
+import { Alert, Rating } from "@mui/material";
 import AvailableDates from "@/components/Sections/AvailableDates";
 
 const Details = ({ params }: { params: { id: string } }) => {
@@ -71,6 +66,7 @@ const Details = ({ params }: { params: { id: string } }) => {
 
   //book date
   const [AVDate, setAVDate] = useState("");
+  const [DateUnSelected, setDateUnSelected] = useState(false);
 
   const specializationDetailHandlerr = useMemo(() => {
     const specializationDetailFillter = GeneralInof.filter(
@@ -100,7 +96,21 @@ const Details = ({ params }: { params: { id: string } }) => {
         <div className="head">
           Doctors Available for Booking an Appointment 15 Doctor
         </div>
-
+        {DateUnSelected && (
+          <Alert
+            style={{
+              position: "fixed",
+              bottom: "30px",
+              width: "14%",
+              right: "1%",
+              zIndex: "3",
+            }}
+            severity="error"
+            variant="filled"
+          >
+            Please select a booking date.
+          </Alert>
+        )}
         {DonctorsName.map((e) => {
           return (
             <Row className=" specializationCard" key={Math.random() * 10}>
@@ -123,7 +133,7 @@ const Details = ({ params }: { params: { id: string } }) => {
                       <div className="dep">
                         Specialization : <span> {sp.Dep}</span>
                       </div>
-                      <div className="d-flex align-items-center">
+                      <div className="d-flex align-items-center rateSec">
                         <Rating
                           name="simple"
                           value={5}
@@ -158,16 +168,20 @@ const Details = ({ params }: { params: { id: string } }) => {
                         <Button
                           className="BookBtn"
                           onClick={() => {
-                            setisDisabled(true);
-                            handleShow();
-                            let Data = {
-                              DonctorName: e,
-                              dep: sp.Dep,
-                              id: sp.prefixId,
-                              date: AVDate,
-                            };
-
-                            dispatch(AddAppointment(Data));
+                            if (AVDate.length === 0) {
+                              setDateUnSelected(true);
+                            } else {
+                              setisDisabled(true);
+                              handleShow();
+                              setDateUnSelected(false);
+                              let Data = {
+                                DonctorName: e,
+                                dep: sp.Dep,
+                                id: sp.prefixId,
+                                date: AVDate,
+                              };
+                              dispatch(AddAppointment(Data));
+                            }
                           }}
                           disabled={isDisabled}
                         >
